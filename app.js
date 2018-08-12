@@ -15,3 +15,30 @@ Okay what do I need to do here:
 to do - decide on whether to use all flavors for each genre or only the most important - needs testing in yummly-apitest.html) 
 */
 
+const YUMMLY_SEARCH_URL = "http://api.yummly.com/v1/api/recipes?_app_id=bdc38e58&_app_key=c9fc6078a1ba99a9705c93899f54de71"
+
+function getYummlyData(searchTerm, callback){
+  let params = {
+
+  }
+}
+
+function displayApiData(){
+
+}
+
+function getGenre(){
+  $('.js-form').submit(event => {
+    event.preventDefault();
+    let query = $('.js-genres').val();
+    console.log(query);
+
+    getYummlyData(query, displayApiData)
+  });
+}
+
+function runApp(){
+  getGenre();
+}
+
+$(runApp);

@@ -3,14 +3,19 @@
 <head>
 	<title>Genre-Noms - Meal Suggestions for Movies and TV Shows</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
+  <script
+    src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous">
+    </script>
 </head>
 <body>
 	<div>
 		<h1>Genre-Noms</h1>
-		<form>
+		<form class="js-form">
 			<label>Pick a Genre</label>
 			<select class="js-genres">
-				<option value="Default">Pick a Genre</option>
+				<option value="Default"></option>
 				<option value="Action-Comedy">Action-Comedy</option>
 				<option value="Adventure">Adventure</option>
 				<option value="Animation">Animation</option>
@@ -26,7 +31,7 @@
 				<option value="Superhero">Superhero</option>
 				<option value="Thriller">Thriller</option>
 			</select>
-			<button class="js-getRecipes">Find your Recipes</button>
+			<button type="submit" class="js-getRecipes">Find your Recipes</button>
 		</form>
 
 		<section class="recipeResults">
