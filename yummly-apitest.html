@@ -18,7 +18,7 @@
             We would like to see if we can get an valid JSON result which we can parse in using AJAX
             */
             /* Update all the parameters for your API test*/
-            let movieGenre = 'Mystery';
+            let movieGenre = $('.js-genres').val();
 
             let sweetMax = 0;
             let sweetMin = 0;
@@ -46,215 +46,202 @@
                 meatyMin = 0;
                 bitterMax = 0.3;
                 bitterMin = 0;
-            } else if (movieGenre == 'template') { //template for the following IF's
-                sweetMax = 0;
-                sweetMin = 0;
-                sourMax = 0;
-                sourMin = 0;
-                saltyMax = 0;
-                saltyMin = 0;
-                piquantMax = 0;
-                piquantMin = 0;
-                meatyMax = 0;
-                meatyMin = 0;
-                bitterMax = 0;
-                bitterMin = 0;
             } 
             else if (movieGenre == 'Romance') { //template for the following IF's
-                sweetMax = 0;
-                sweetMin = 0;
-                sourMax = 0;
+                sweetMax = 1;
+                sweetMin = 0.5;
+                sourMax = 0.4;
                 sourMin = 0;
-                saltyMax = 0;
+                saltyMax = 0.6;
                 saltyMin = 0;
-                piquantMax = 0;
+                piquantMax = 0.3;
                 piquantMin = 0;
-                meatyMax = 0;
-                meatyMin = 0;
-                bitterMax = 0;
-                bitterMin = 0;
+                meatyMax = 1;
+                meatyMin = 0.5;
+                bitterMax = 0.8;
+                bitterMin = 0.24;
             }
             else if (movieGenre == 'Crime') { //template for the following IF's
                 sweetMax = 0;
                 sweetMin = 0;
-                sourMax = 0;
-                sourMin = 0;
-                saltyMax = 0;
-                saltyMin = 0;
-                piquantMax = 0;
+                sourMax = 0.8;
+                sourMin = 0.3;
+                saltyMax = 1;
+                saltyMin = 0.5;
+                piquantMax = 1;
                 piquantMin = 0;
-                meatyMax = 0;
+                meatyMax = 1;
                 meatyMin = 0;
-                bitterMax = 0;
-                bitterMin = 0;
+                bitterMax = 0.7;
+                bitterMin = 0.2;
             }
             else if (movieGenre == 'Comedy') { //template for the following IF's
-                sweetMax = 0;
-                sweetMin = 0;
-                sourMax = 0;
-                sourMin = 0;
-                saltyMax = 0;
+                sweetMax = 1;
+                sweetMin = 0.5;
+                sourMax = 1;
+                sourMin = 0.5;
+                saltyMax = 0.5;
                 saltyMin = 0;
-                piquantMax = 0;
+                piquantMax = 0.3;
                 piquantMin = 0;
-                meatyMax = 0;
+                meatyMax = 0.6;
                 meatyMin = 0;
-                bitterMax = 0;
-                bitterMin = 0;
+                bitterMax = 1;
+                bitterMin = 0.3;
             }
             else if (movieGenre == 'Animation') { //template for the following IF's
-                sweetMax = 0;
-                sweetMin = 0;
-                sourMax = 0;
-                sourMin = 0;
-                saltyMax = 0;
+                sweetMax = 1;
+                sweetMin = 0.5;
+                sourMax = 1;
+                sourMin = 0.5;
+                saltyMax = 0.5;
                 saltyMin = 0;
-                piquantMax = 0;
+                piquantMax = 0.3;
                 piquantMin = 0;
-                meatyMax = 0;
+                meatyMax = 0.6;
                 meatyMin = 0;
-                bitterMax = 0;
+                bitterMax = 0.4;
                 bitterMin = 0;
             }
             else if (movieGenre == 'Sci-fi') { //template for the following IF's
-                sweetMax = 0;
-                sweetMin = 0;
-                sourMax = 0;
+                sweetMax = 0.6;
+                sweetMin = 0.1;
+                sourMax = 0.4;
                 sourMin = 0;
-                saltyMax = 0;
-                saltyMin = 0;
-                piquantMax = 0;
+                saltyMax = 1;
+                saltyMin = 0.5;
+                piquantMax = 0.4;
                 piquantMin = 0;
-                meatyMax = 0;
-                meatyMin = 0;
-                bitterMax = 0;
-                bitterMin = 0;
+                meatyMax = 1;
+                meatyMin = 0.5;
+                bitterMax = 0.75;
+                bitterMin = 0.25;
             }
             else if (movieGenre == 'Adventure') { //template for the following IF's
-                sweetMax = 0;
+                sweetMax = 0.35;
                 sweetMin = 0;
-                sourMax = 0;
+                sourMax = 0.5;
                 sourMin = 0;
-                saltyMax = 0;
-                saltyMin = 0;
-                piquantMax = 0;
+                saltyMax = 1;
+                saltyMin = 0.5;
+                piquantMax = 0.5;
                 piquantMin = 0;
-                meatyMax = 0;
-                meatyMin = 0;
-                bitterMax = 0;
+                meatyMax = 1;
+                meatyMin = 0.5;
+                bitterMax = 0.6;
                 bitterMin = 0;
             }
             else if (movieGenre == 'Horror') { //template for the following IF's
-                sweetMax = 0;
+                sweetMax = 0.3;
                 sweetMin = 0;
-                sourMax = 0;
+                sourMax = 0.8;
                 sourMin = 0;
-                saltyMax = 0;
+                saltyMax = 1;
                 saltyMin = 0;
-                piquantMax = 0;
-                piquantMin = 0;
-                meatyMax = 0;
-                meatyMin = 0;
-                bitterMax = 0;
+                piquantMax = 1;
+                piquantMin = 0.5;
+                meatyMax = 1;
+                meatyMin = 0.5;
+                bitterMax = .75;
                 bitterMin = 0;
             }
             else if (movieGenre == 'Fantasy') { //template for the following IF's
-                sweetMax = 0;
-                sweetMin = 0;
-                sourMax = 0;
+                sweetMax = 1;
+                sweetMin = 0.5;
+                sourMax = 0.3;
                 sourMin = 0;
-                saltyMax = 0;
+                saltyMax = 0.75;
                 saltyMin = 0;
-                piquantMax = 0;
+                piquantMax = 0.3;
                 piquantMin = 0;
-                meatyMax = 0;
-                meatyMin = 0;
-                bitterMax = 0;
+                meatyMax = 1;
+                meatyMin = 0.5;
+                bitterMax = 0.5;
                 bitterMin = 0;
             }
             else if (movieGenre == 'Action') { //template for the following IF's
-                sweetMax = 0;
+                sweetMax = 0.3;
                 sweetMin = 0;
-                sourMax = 0;
+                sourMax = 0.3;
                 sourMin = 0;
-                saltyMax = 0;
+                saltyMax = 0.6;
                 saltyMin = 0;
-                piquantMax = 0;
+                piquantMax = 0.3;
                 piquantMin = 0;
-                meatyMax = 0;
-                meatyMin = 0;
-                bitterMax = 0;
-                bitterMin = 0;
+                meatyMax = 1;
+                meatyMin = 0.5;
+                bitterMax = 1;
+                bitterMin = 0.5;
             }
             else if (movieGenre == 'Rom-Com') { //template for the following IF's
-                sweetMax = 0;
-                sweetMin = 0;
-                sourMax = 0;
+                sweetMax = 1;
+                sweetMin = 0.5;
+                sourMax = 0.3;
                 sourMin = 0;
-                saltyMax = 0;
-                saltyMin = 0;
-                piquantMax = 0;
+                saltyMax = 1;
+                saltyMin = 0.5;
+                piquantMax = 0.4;
                 piquantMin = 0;
-                meatyMax = 0;
-                meatyMin = 0;
-                bitterMax = 0;
+                meatyMax = 1;
+                meatyMin = 0.35;
+                bitterMax = 0.5;
                 bitterMin = 0;
             }
             else if (movieGenre == 'Thriller') { //template for the following IF's
-                sweetMax = 0;
-                sweetMin = 0;
-                sourMax = 0;
+                sweetMax = 1;
+                sweetMin = 0.5;
+                sourMax = 0.3;
                 sourMin = 0;
-                saltyMax = 0;
+                saltyMax = 0.5;
                 saltyMin = 0;
-                piquantMax = 0;
+                piquantMax = 0.3;
                 piquantMin = 0;
-                meatyMax = 0;
-                meatyMin = 0;
-                bitterMax = 0;
-                bitterMin = 0;
+                meatyMax = 1;
+                meatyMin = 0.35;
+                bitterMax = 1;
+                bitterMin = 0.5;
             }
             else if (movieGenre == 'Drama') { //template for the following IF's
-                sweetMax = 0;
-                sweetMin = 0;
-                sourMax = 0;
+                sweetMax = 1;
+                sweetMin = 0.35;
+                sourMax = 0.3;
                 sourMin = 0;
-                saltyMax = 0;
+                saltyMax = 0.5;
                 saltyMin = 0;
-                piquantMax = 0;
-                piquantMin = 0;
-                meatyMax = 0;
-                meatyMin = 0;
-                bitterMax = 0;
+                piquantMax = 1;
+                piquantMin = 0.5;
+                meatyMax = 1;
+                meatyMin = 0.5;
+                bitterMax = 0.5;
                 bitterMin = 0;
             }
             else if (movieGenre == 'Action-Comedy') { //template for the following IF's
-                sweetMax = 0;
-                sweetMin = 0;
-                sourMax = 0;
-                sourMin = 0;
-                saltyMax = 0;
+                sweetMax = 1;
+                sweetMin = 0.3;
+                sourMax = 1;
+                sourMin = 0.3;
+                saltyMax = 0.5;
                 saltyMin = 0;
-                piquantMax = 0;
+                piquantMax = 0.3;
                 piquantMin = 0;
-                meatyMax = 0;
-                meatyMin = 0;
-                bitterMax = 0;
-                bitterMin = 0;
+                meatyMax = 1;
+                meatyMin = 0.5;
+                bitterMax = 1;
+                bitterMin = 0.5;
             }
             else if (movieGenre == 'Superhero') { //template for the following IF's
-                sweetMax = 0;
+                sweetMax = 0.3;
                 sweetMin = 0;
-                sourMax = 0;
+                sourMax = 0.5;
                 sourMin = 0;
-                saltyMax = 0;
-                saltyMin = 0;
-                piquantMax = 0;
+                saltyMax = 1;
+                saltyMin = 0.5;
+                piquantMax = 0.3;
                 piquantMin = 0;
-                meatyMax = 0;
-                meatyMin = 0;
-                bitterMax = 0;
-                bitterMin = 0;
+                meatyMax = 1;
+                meatyMin = 0.5;
+                bitterMax = 1;
+                bitterMin = 0.5;
             }
 
             
