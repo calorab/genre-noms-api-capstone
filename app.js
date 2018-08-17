@@ -13,11 +13,8 @@ Okay what do I need to do here:
 7.init genreNoms
 */
 
-const YUMMLY_SEARCH_URL = "http://api.yummly.com/v1/api/recipes?_app_id=bdc38e58&_app_key=c9fc6078a1ba99a9705c93899f54de71"
-
-$(document).ready(function () {
-    let movieGenre = $('.js-genres').val();
-    console.log(movieGenre);
+// Step 2: with input from the user make the API call
+function getDataFromApi(movieGenre) {
 
     let sweetMax = 0;
     let sweetMin = 0;
@@ -241,7 +238,8 @@ $(document).ready(function () {
         'flavor.bitter.min': bitterMin,
         'flavor.bitter.max': bitterMax,
         'flavor.piquant.min': piquantMin,
-        'flavor.piquant.max': piquantMax
+        'flavor.piquant.max': piquantMax,
+        requirePictures: true
     };
 
     var getResult = $.ajax({
@@ -254,20 +252,19 @@ $(document).ready(function () {
 
         .done(function (result) {
             console.log(result);
-            displayApiData(result);
+            const output = result.matches.map((item) => displayApiData(item));
+            $('.recipeResults').html(output);
+
         })
-});
-
-
-function displayApiData(data) {
-    let result = data.matches.map((item, index) => {
-        renderYummlyData(item);
-        $('recipeResults').html(result);
-        console.log("here");
-    });
+        .fail(function (jqXHR, error, errorThrown) {
+            console.log(jqXHR);
+            console.log(error);
+            console.log(errorThrown);
+        });
 }
 
-function renderYummlyData(results) {
+// Step 3: With api data results - display them
+function displayApiData(results) {
     console.log("there");
     return `
     <a class='js-results-container' href='${results.sourceRecipeUrl}' target="_blank">
@@ -280,17 +277,15 @@ function renderYummlyData(results) {
         </div>
     </a>`
 }
+//Step 1: get input from the user
+function getGenre() {
+    $('.js-form').submit(event => {
+        event.preventDefault();
+        let movieGenre = $('.js-genres').val();
+        console.log(movieGenre);
 
-//function getGenre() { //tested
-//    $('.js-form').submit(event => {
-//        event.preventDefault();
-//
-//        getDataFromApi(movieGenre, displayApiData);
-//    });
-//}
+        getDataFromApi(movieGenre);
+    });
+}
 
-//function runApp() {
-//    getGenre();
-//}
-//
-//$(runApp);
+$(getGenre);
