@@ -267,7 +267,7 @@ function getDataFromApi(movieGenre) {
 function displayApiData(results) {
     console.log("there");
     return `
-    <a class='js-results-container' href='${results.sourceRecipeUrl}' target="_blank">
+<a class='js-results-container' href= 'https://www.yummly.com/recipe/${results.id}' target="_blank">
         <div>
         <h2>${results.recipeName}</h2>
         <p>Rating: ${results.rating} out of 5</p>
