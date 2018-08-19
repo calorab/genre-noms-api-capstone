@@ -14,6 +14,9 @@ Okay what do I need to do here:
 */
 
 // Step 2: with input from the user make the API call
+
+$('.js-restart-button').hide();
+
 function getDataFromApi(movieGenre) {
 
     let sweetMax = 0;
@@ -266,6 +269,8 @@ function getDataFromApi(movieGenre) {
 // Step 3: With api data results - display them
 function displayApiData(results) {
     console.log("there");
+    $('.js-form').hide();
+    $('.js-restart-button').show();
     return `
 <a class='js-results-container' href= 'https://www.yummly.com/recipe/${results.id}' target="_blank">
         <div>
@@ -277,6 +282,14 @@ function displayApiData(results) {
         </div>
     </a>`
 }
+
+function restartSearch() {
+    $('.js-restart-button').on('click', '.js-restart', function (event) {
+        location.reload();
+    });
+    console.log(`restartApp ran`);
+}
+
 //Step 1: get input from the user
 function getGenre() {
     $('.js-form').submit(event => {
@@ -287,5 +300,7 @@ function getGenre() {
         getDataFromApi(movieGenre);
     });
 }
+
+
 
 $(getGenre);
