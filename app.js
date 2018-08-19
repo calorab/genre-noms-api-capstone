@@ -244,7 +244,6 @@ function getDataFromApi(movieGenre) {
         'flavor.piquant.max': piquantMax,
         requirePictures: true
     };
-
     var getResult = $.ajax({
             url: "http://api.yummly.com/v1/api/recipes?_app_id=bdc38e58&_app_key=c9fc6078a1ba99a9705c93899f54de71",
             data: params, //says get from params above
@@ -252,12 +251,10 @@ function getDataFromApi(movieGenre) {
             /*set the call type GET / POST*/
             type: "GET"
         })
-
         .done(function (result) {
             console.log(result);
             const output = result.matches.map((item) => displayApiData(item));
             $('.recipeResults').html(output);
-
         })
         .fail(function (jqXHR, error, errorThrown) {
             console.log(jqXHR);
