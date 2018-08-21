@@ -13,14 +13,18 @@
         src = 'app.js'
 
     </script>
+    <link href="https://fonts.googleapis.com/css?family=Lobster|Lora" rel="stylesheet">
 </head>
 
 <body>
-    <div>
+    <div class="banner">
+
+    </div>
+    <div class="container">
         <h1>Genre-Noms</h1>
         <form class="js-form">
             <label>Pick a Genre</label>
-            <select class="js-genres">
+            <select class="js-genres" required>
                 <option value="Default"></option>
                 <option value="Action-Comedy">Action-Comedy</option>
                 <option value="Adventure">Adventure</option>
@@ -39,10 +43,11 @@
             </select>
             <button type="submit" class="js-getRecipes">Find your Recipes</button>
         </form>
-        <div class="js-restart-button">
-            <section>
+        <div class="js-results-message">
+            <form>
+                <p class="resultsMessage">Check out these recipes!<br>Need to search again? Click the button below.</p>
                 <button type="submit" class='js-restart'>Change Your Genre</button>
-            </section>
+            </form>
         </div>
 
 
@@ -54,5 +59,9 @@
     </div>
     <script src="app.js"></script>
 </body>
+
+<footer>
+    <p>Recipe search powered by <a href='http://www.yummly.co/recipes'><img alt='Yummly' src='https://static.yummly.co/api-logo.png'/></a></p>
+</footer>
 
 </html>

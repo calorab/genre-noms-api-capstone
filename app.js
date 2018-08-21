@@ -1,21 +1,6 @@
-/*
-Okay what do I need to do here:
-1. Hide/show form/results = ( .page display none && .show display: block  ||  .hide() && .show() )
-2. See genre choice ( $('.js-genres').val() or something similar )
-3. Link Genre choice to flavor (could create an array and iterate with  ENTER_METHOD_TO_BE_USED )
-4. See submit (  $('.js-getRecipes').submit( => { ... })  etc )
-5. On submit do:
-    a. getJSON function (with callback ENTER_callback_HERE - probably displayResults/Recipes/ETC)
-    b. If/else (?) to get genre choice (.val() most likely I feel like)
-    c. Display results
-    d. Render results - the HTML that will go in .recipeResults)
-6. If error ( displayResults with If/Else statement ? )
-7.init genreNoms
-*/
-
 // Step 2: with input from the user make the API call
 
-$('.js-restart-button').hide();
+$('.js-results-message').hide();
 
 function getDataFromApi(movieGenre) {
 
@@ -245,7 +230,7 @@ function getDataFromApi(movieGenre) {
         requirePictures: true
     };
     var getResult = $.ajax({
-            url: "http://api.yummly.com/v1/api/recipes?_app_id=bdc38e58&_app_key=c9fc6078a1ba99a9705c93899f54de71",
+            url: "https://api.yummly.com/v1/api/recipes?_app_id=bdc38e58&_app_key=c9fc6078a1ba99a9705c93899f54de71",
             data: params, //says get from params above
             dataType: "json",
             /*set the call type GET / POST*/
@@ -267,22 +252,23 @@ function getDataFromApi(movieGenre) {
 function displayApiData(results) {
     console.log("there");
     $('.js-form').hide();
-    $('.js-restart-button').show();
+    $('.js-results-message').show();
     return `
-<a class='js-results-container' href= 'https://www.yummly.com/recipe/${results.id}' target="_blank">
-        <div>
-        <h2>${results.recipeName}</h2>
-        <p>Rating: ${results.rating} out of 5</p>
+        <a class='js-results-container' href= 'https://www.yummly.com/recipe/${results.id}' target="_blank">
+        <div class="resultsContainer">
+        <h2 class="recipeName">${results.recipeName}</h2>
+        <p class="rating">Rating: ${results.rating} out of 5</p>
         <picture>
-            <img src="${results.smallImageUrls}" alt="Recipe Picture" style="width:auto">
+            <img class="recipePicture" src="${results.smallImageUrls}" alt="Recipe Picture" style="width:auto">
         </picture>
         </div>
     </a>`
 }
 
 function restartSearch() {
-    $('.js-restart-button').on('click', '.js-restart', function (event) {
+    $('.js-results-message').click('.js-restart', function (event) {
         location.reload();
+        getDataFromApi();
     });
     console.log(`restartApp ran`);
 }

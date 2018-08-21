@@ -1,0 +1,153 @@
+* {
+    box-sizing: border-box;
+
+}
+
+html {
+    font-family: "Roboto", helvetica, sans-serif;
+}
+
+body {
+    background-color: #FFF7D0;
+    margin: 0;
+    margin-bottom: 150px;
+}
+
+h1 {
+    font-family: 'Lobster', cursive;
+}
+
+p,
+h2,
+label {
+    font-family: 'Lora', serif;
+}
+
+.container {
+    position: relative;
+    text-align: center;
+    color: #632500;
+}
+
+.rating {
+    margin-top: 10px;
+}
+
+.recipeName {
+    margin-top: 25px;
+}
+
+.recipePicture {
+    border: 1px solid #A56A04;
+}
+
+.banner {
+    background-image: url(https://images.unsplash.com/photo-1512149074996-e923ac45be6a?ixlib=rb-0.3.5&s=ec2f8022873a898e6b9af69df67b02bf&auto=format&fit=crop&w=1350&q=80);
+    height: 250px;
+    width: 100%;
+}
+
+.resultsContainer {
+    background-color: #D0AB61;
+    border-width: 10px;
+    border-radius: 8px;
+    border-color: #A56A04;
+    width: 75%;
+    margin: auto;
+}
+
+.resultsContainer h2 {
+    color: #632500;
+}
+
+.resultsContainer p {
+    color: #A56A04;
+}
+
+a:link {
+    text-decoration: none;
+    font-family: 'Lora', serif;
+}
+
+button {
+    color: #FFF7D0;
+    font-family: 'Lora', serif;
+    background-color: #632500;
+    border: 2px;
+    border-color: #D0AB61;
+    border-radius: 4px;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #632500;
+    text-align: center;
+    height: 100px;
+}
+
+.row::before,
+.row::after {
+    display: table;
+    content: '';
+}
+
+.row::after {
+    clear: both;
+}
+
+fieldset {
+    padding: 0;
+    border: 0;
+    margin: 0;
+}
+
+@media only screen and (min-width: 300px) {
+    .banner {
+        height: 350px;
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 96px;
+        margin-bottom: 20px;
+    }
+
+    label {
+        font-size: 48px;
+    }
+
+    select {
+        width: 150px;
+        padding: 12px 20px;
+        margin: 8px 0;
+    }
+
+    button {
+        width: 150px;
+        height: 50px;
+        font-size: 16px;
+    }
+
+    .container {
+        margin-top: 200px;
+    }
+
+    .js-results-message p {
+        font-size: 24px;
+    }
+
+    .recipeName {
+        font-size: 24px;
+    }
+}
+
+/*
+@media only screen and (min-width: 550px) {
+    .banner {
+        height: 200px;
+    }
+}
+*/
