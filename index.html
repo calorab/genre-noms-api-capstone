@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <title>Genre-Noms - Meal Suggestions for Movies and TV Shows</title>
@@ -17,15 +17,14 @@
 </head>
 
 <body>
-    <div class="banner">
+    <div role="banner" class="banner">
 
     </div>
-    <div class="container">
+    <main role="main" class="container">
         <div class="formContainer">
             <h1>Genre-Noms</h1>
             <form class="js-form">
                 <label>Choose a Genre:</label>
-
                 <select class="js-genres">
                 <option value="Default"></option>
                 <option value="Action-Comedy">Action-Comedy</option>
@@ -43,15 +42,16 @@
                 <option value="Superhero">Superhero</option>
                 <option value="Thriller">Thriller</option>
                 </select>
+
                 <button type="submit" class="js-getRecipes">Find your Recipes</button>
             </form>
         </div>
-        <div class="js-results-message">
+        <section role="region" class="js-results-message">
             <form>
                 <p class="resultsMessage">Check out these recipes!<br>Need to search again? Click the button below.</p>
                 <button type="submit" class='js-restart'>Change Your Genre</button>
             </form>
-        </div>
+        </section>
 
 
         <section class="recipeResults">
@@ -59,12 +59,12 @@
 
         </section>
 
-    </div>
+    </main>
     <script src="app.js"></script>
 </body>
 
 <footer>
-    <p class="source">Recipe search powered by <a href='http://www.yummly.co/recipes'><img alt='Yummly' src='https://static.yummly.co/api-logo.png'/></a></p>
+    <p role='contentinfo' class="source">Recipe search powered by <a href='http://www.yummly.co/recipes'><img alt='Yummly' src='https://static.yummly.co/api-logo.png'/></a></p>
 </footer>
 
 </html>
