@@ -5,16 +5,16 @@ Genre-NOMS is the app for those who love to cook a delicious meal while watching
 
 User Flows and Wireframes:
 
-    genre-noms-api-capstone/IMG_0364.jpg
+    ![ScreenShot](IMG_0364.jpg)
 
-    genre-noms-api-capstone/IMG_0366.jpg
+    ![ScreenShot](IMG_0366.jpg)
 
-    genre-noms-api-capstone/IMG_0365.jpg
+    ![ScreenShot](IMG_0365.jpg)
 
 Screen Shots:
 
-    genre-noms-api-capstone/Screen_Shot_1.png
-    genre-noms-api-capstone/IScreen_Shot_2.png
+    ![ScreenShot](Screen_Shot_1.png)
+    ![ScreenShot](Screen_Shot_2.png)
 
 Technologies Used:
     - HTML
