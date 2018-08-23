@@ -251,7 +251,7 @@ function getDataFromApi(movieGenre) {
 // Step 3: With api data results - display them
 function displayApiData(results) {
     console.log("there");
-    $('.js-form').hide();
+    $('.formContainer').hide();
     $('.js-results-message').show();
     return `
         <a class='js-results-container' href= 'https://www.yummly.com/recipe/${results.id}' target="_blank">

@@ -10,23 +10,38 @@ html {
 body {
     background-color: #FFF7D0;
     margin: 0;
-    margin-bottom: 150px;
+    margin-bottom: 175px;
 }
 
 h1 {
     font-family: 'Lobster', cursive;
+    font-size: 96px;
+    margin-bottom: 20px;
+}
+
+.formContainer {
+    background-color: #D0AB61;
+    float: center;
+    width: 65%;
+    height: 500px;
+    margin: auto;
+    padding: 20px;
+    border: 5px;
+    border-radius: 15px;
 }
 
 p,
 h2,
 label {
     font-family: 'Lora', serif;
+    font-size: 48px;
 }
 
 .container {
     position: relative;
     text-align: center;
     color: #632500;
+    margin-top: 200px;
 }
 
 .rating {
@@ -43,7 +58,7 @@ label {
 
 .banner {
     background-image: url(https://images.unsplash.com/photo-1512149074996-e923ac45be6a?ixlib=rb-0.3.5&s=ec2f8022873a898e6b9af69df67b02bf&auto=format&fit=crop&w=1350&q=80);
-    height: 250px;
+    height: 350px;
     width: 100%;
 }
 
@@ -69,13 +84,33 @@ a:link {
     font-family: 'Lora', serif;
 }
 
+.js-genres {
+    width: 175px;
+    height: 50px;
+    background-color: #DBC7B3;
+    position: relative;
+    color: #632500;
+}
+
 button {
+    display: block;
+    float: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
     color: #FFF7D0;
     font-family: 'Lora', serif;
     background-color: #632500;
     border: 2px;
     border-color: #D0AB61;
     border-radius: 4px;
+    width: 300px;
+    height: 75px;
+    font-size: 24px;
+}
+
+img {
+    margin-bottom: 20px;
 }
 
 footer {
@@ -85,7 +120,7 @@ footer {
     width: 100%;
     background-color: #632500;
     text-align: center;
-    height: 100px;
+    height: 150px;
 }
 
 .row::before,
@@ -98,56 +133,96 @@ footer {
     clear: both;
 }
 
-fieldset {
-    padding: 0;
-    border: 0;
-    margin: 0;
-}
-
-@media only screen and (min-width: 300px) {
+@media only screen and (min-width: 640px) {
     .banner {
-        height: 350px;
+        height: 150px;
         width: 100%;
     }
 
-    h1 {
-        font-size: 96px;
-        margin-bottom: 20px;
-    }
-
-    label {
-        font-size: 48px;
-    }
-
-    select {
-        width: 150px;
-        padding: 12px 20px;
-        margin: 8px 0;
-    }
-
-    button {
-        width: 150px;
+    footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: #632500;
+        text-align: center;
         height: 50px;
-        font-size: 16px;
+        font-size: 12px;
     }
 
     .container {
-        margin-top: 200px;
+        margin-top: 30px;
     }
 
-    .js-results-message p {
+    .formContainer {
+        height: 285px;
+        width: 50%;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    label {
         font-size: 24px;
+    }
+
+    .js-genres {
+        width: 125px;
+        height: 35px;
+    }
+
+    .js-form {
+        width:
+    }
+
+    .js-genres {
+        width: 125px;
+        height: 35px;
+        background-color: #DBC7B3;
+        position: relative;
+        color: #632500;
+    }
+
+    button {
+        width: 200px;
+        height: 50px;
+        font-size: 20px;
+    }
+
+    .resultsMessage {
+        font-size: 36px;
+    }
+
+    .resultsContainer {
+        background-color: #D0AB61;
+        border-width: 10px;
+        border-radius: 8px;
+        border-color: #A56A04;
+        width: 50%;
+        margin: auto;
+    }
+
+    h2 {
+        font-size: 36px;
+    }
+
+    .resultsContainer p {
+        font-size: 24px;
+    }
+
+    body {
+        margin-bottom: 75px;
+    }
+
+    img {
+        margin-bottom: 10px;
+    }
+    .source {
+        font-size: 18px;
     }
 
     .recipeName {
-        font-size: 24px;
+        margin-bottom: 18px;
     }
 }
-
-/*
-@media only screen and (min-width: 550px) {
-    .banner {
-        height: 200px;
-    }
-}
-*/
