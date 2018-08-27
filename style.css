@@ -123,6 +123,11 @@ footer {
     height: 150px;
 }
 
+.source {
+    align-self: center;
+    color: whitesmoke;
+}
+
 .row::before,
 .row::after {
     display: table;
@@ -218,6 +223,7 @@ footer {
     img {
         margin-bottom: 10px;
     }
+
     .source {
         font-size: 18px;
     }
