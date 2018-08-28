@@ -1,7 +1,14 @@
-// Step 2: with input from the user make the API call
-
 $('.js-results-message').hide();
+$('.formContainer').hide();
 
+$('.tryItOut').on('click', function (event) {
+    $('.intro').hide();
+    $('.formContainer').show();
+
+    console.log("here");
+});
+
+// Step 2: with input from the user make the API call
 function getDataFromApi(movieGenre) {
 
     let sweetMax = 0;
@@ -280,7 +287,6 @@ function getGenre() {
         getDataFromApi(movieGenre);
     });
 }
-
 
 
 $(getGenre);
