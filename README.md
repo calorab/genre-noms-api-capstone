@@ -17,8 +17,10 @@ Screen Shots:
 ![ScreenShot](Screen_Shot_1.png)
 ![ScreenShot](Screen_Shot_2.png)
 
+Changes were made during developement so that the end flow of the app does  not match the flow charts, wire frames or screen shots.
+
 Technologies Used:
-    - HTML
-    - CSS
-    - JavaScript
-    - jQuery
+- HTML
+- CSS
+- JavaScript
+- jQuery
