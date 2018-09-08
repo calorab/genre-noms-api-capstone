@@ -15,7 +15,7 @@
 
     <div class="intro">
         <p>Welcome to Genre-Noms, the app that pairs delicious recipes to your favorite movie or TV show!</p>
-        <p>How it works: <br>Genre-Noms uses specific flavor profiles to curate a recipe list that should match the vibe of your entertinment. Use Genre-Noms to cook an amazing meal to enjoy either by yourself or with family and friends.</p>
+        <p>How it works: <br>Genre-Noms uses specific flavor profiles (Sweet and Salty, Meaty and Spicy, Sour and Sweet, etc.) to curate a recipe list that will provide delicious recipes perfect for your entertainment. Use Genre-Noms to cook an amazing meal with family and friends.</p>
         <button type="submit" class="tryItOut">Try it out!</button>
     </div>
 
@@ -25,21 +25,20 @@
             <form class="js-form">
                 <label>Choose a Genre:</label>
                 <select class="js-genres">
-                <option value="Default"></option>
-                <option value="Action-Comedy">Action-Comedy</option>
-                <option value="Adventure">Adventure</option>
-                <option value="Animation">Animation</option>
-                <option value="Comedy">Comedy</option>
-                <option value="Crime">Crime</option>
-                <option value="Drama">Drama</option>
-                <option value="Fantasy">Fantasy</option>
-                <option value="Horror">Horror</option>
-                <option value="Mystery">Mystery</option>
-                <option value="Romance">Romance</option>
-                <option value="Rom-Com">Romantic Comedy</option>
-                <option value="Sci-fi">Sci-fi</option>
-                <option value="Superhero">Superhero</option>
-                <option value="Thriller">Thriller</option>
+                <option value="Action">Action (Bitter/Meaty)</option>
+                <option value="Action-Comedy">Action-Comedy (Meaty/Bitter/Sweet)</option>
+                <option value="Animation">Animation (Sweet/Sour/Meaty)</option>
+                <option value="Comedy">Comedy (Sweet/Sour)</option>
+                <option value="Crime">Crime (Meaty/Spicy/Bitter)</option>
+                <option value="Drama">Drama (Spicy/Meaty)</option>
+                <option value="Fantasy">Fantasy (Sweet/Meaty/Salty)</option>
+                <option value="Horror">Horror (Sour/Spicy)</option>
+                <option value="Mystery">Mystery (Sour/Salty)</option>
+                <option value="Romance">Romance (Meaty/Sweet)</option>
+                <option value="Rom-Com">Romantic Comedy (Sweet/Salty/Meaty)</option>
+                <option value="Sci-fi">Sci-fi (Salty/Meaty)</option>
+                <option value="Superhero">Superhero (Salty/Meaty/Bitter)</option>
+                <option value="Thriller">Thriller (Sweet/Bitter)</option>
                 </select>
 
                 <button type="submit" class="js-getRecipes">Find your Recipes</button>
@@ -48,6 +47,7 @@
         <section role="region" class="js-results-message">
             <form>
                 <p class="resultsMessage">Check out these recipes!<br>Need to search again? Click the button below.</p>
+                <p class="flavors"></p>
                 <button type="submit" class='js-restart'>Switch Genres</button>
             </form>
         </section>
